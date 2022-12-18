@@ -9,22 +9,6 @@ const Pegawai = () => {
     // fetch api pegawai
     const { data: pegawai } = useSWR('http://localhost:5000/api/pegawai', fetcher);
 
-    // const [pegawai, setPegawai] = useState([]);
-
-    // const getPegawai = async () => {
-    //     try {
-    //         const response = await axios.get('http://localhost:5000/api/pegawai/');
-    //         console.log(response.data);
-
-    //         setPegawai(response.data);
-    //     } catch (err) {
-    //         console.error(err.message);
-    //     }
-    // }
-
-    // useEffect(() => {
-    //     getPegawai();
-    // }, []);
     return (
         <div className="container py-3">
             <header>
