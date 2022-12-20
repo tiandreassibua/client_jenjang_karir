@@ -7,7 +7,7 @@ const fetcher = (url) => axios.get(url).then((res) => res.data);
 
 const Pegawai = () => {
     // fetch api pegawai
-    const { data: pegawai } = useSWR('http://localhost:5000/api/pegawai', fetcher);
+    const { data: pegawai } = useSWR('https://jenjangkarir.tiandreassibua.repl.co/api/pegawai', fetcher);
 
     return (
         <div className="container py-3">

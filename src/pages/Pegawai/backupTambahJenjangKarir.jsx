@@ -28,13 +28,13 @@ const TambahJenjangKarir = () => {
     // jika belum ada, maka tambahkan
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const response = await axios.get(`http://localhost:5000/api/kinerja/cek/${nip}/${inputs.golongan}`)
+        const response = await axios.get(`https://jenjangkarir.tiandreassibua.repl.co/api/kinerja/cek/${nip}/${inputs.golongan}`)
         if (response.data.status > 1) {
             alert(response.data.msg);
             return;
         } else {
 
-            await axios.post('http://localhost:5000/api/kinerja', {
+            await axios.post('https://jenjangkarir.tiandreassibua.repl.co/api/kinerja', {
                 ...inputs,
                 total_poin: (parseInt(inputs.kedisiplinan) + parseInt(inputs.tanggung_jawab) + parseInt(inputs.sikap) + parseInt(inputs.kompetensi))
             });
@@ -45,9 +45,9 @@ const TambahJenjangKarir = () => {
 
     useEffect(() => {
         const getPegawai = async () => {
-            const peg = await axios.get(`http://localhost:5000/api/pegawai/nip/${nip}`);
+            const peg = await axios.get(`https://jenjangkarir.tiandreassibua.repl.co/api/pegawai/nip/${nip}`);
             setPegawai(peg.data[0].golongan);
-            const golo = await axios.get(`http://localhost:5000/api/golongan`);
+            const golo = await axios.get(`https://jenjangkarir.tiandreassibua.repl.co/api/golongan`);
             setGolongan(golo.data);
         }
 

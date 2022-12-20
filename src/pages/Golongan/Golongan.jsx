@@ -6,7 +6,7 @@ import useSWR from 'swr'
 const fetcher = (url) => axios.get(url).then(res => res.data)
 
 const Golongan = () => {
-    const { data: golongan } = useSWR('http://localhost:5000/api/golongan', fetcher);
+    const { data: golongan } = useSWR('https://jenjangkarir.tiandreassibua.repl.co/api/golongan', fetcher);
 
     const [inputs, setInputs] = useState({
         golongan: '',
@@ -22,7 +22,7 @@ const Golongan = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await axios.post('http://localhost:5000/api/golongan/', inputs);
+            await axios.post('https://jenjangkarir.tiandreassibua.repl.co/api/golongan/', inputs);
             alert('Data berhasil ditambahkan');
             window.location.reload();
         } catch (error) {

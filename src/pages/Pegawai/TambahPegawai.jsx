@@ -7,7 +7,7 @@ const fetcher = url => axios.get(url).then(res => res.data)
 
 const TambahPegawai = () => {
     const nip = Math.floor(Math.random() * (99999999 - 10000000) + 1);
-    const { data } = useSWR('http://localhost:5000/api/golongan', fetcher);
+    const { data } = useSWR('https://jenjangkarir.tiandreassibua.repl.co/api/golongan', fetcher);
     const [err, setErr] = useState(null);
 
     const navigate = useNavigate();
@@ -28,7 +28,7 @@ const TambahPegawai = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await axios.post('http://localhost:5000/api/pegawai/', inputs);
+            await axios.post('https://jenjangkarir.tiandreassibua.repl.co/api/pegawai/', inputs);
             alert('Data berhasil ditambahkan');
             navigate('/pegawai/detail/' + inputs.nip);
         } catch (error) {

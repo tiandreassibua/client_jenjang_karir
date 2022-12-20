@@ -14,7 +14,7 @@ const DetailPegawai = () => {
 
     const handleDelete = async () => {
         try {
-            await axios.delete(`http://localhost:5000/api/pegawai/nip/${nip}`);
+            await axios.delete(`https://jenjangkarir.tiandreassibua.repl.co/api/pegawai/nip/${nip}`);
             alert('Data pegawai berhasil dihapus!');
             navigate('/pegawai');
         } catch (err) {
@@ -25,8 +25,8 @@ const DetailPegawai = () => {
     useEffect(() => {
         const getDetailPegawai = async () => {
             try {
-                const detailPegawai = await axios.get(`http://localhost:5000/api/pegawai/nip/${nip}`);
-                const dataKinerja = await axios.get(`http://localhost:5000/api/kinerja/nip/${nip}`);
+                const detailPegawai = await axios.get(`https://jenjangkarir.tiandreassibua.repl.co/api/pegawai/nip/${nip}`);
+                const dataKinerja = await axios.get(`https://jenjangkarir.tiandreassibua.repl.co/api/kinerja/nip/${nip}`);
                 setPegawai(detailPegawai.data[0]);
                 setJenjang(dataKinerja.data);
                 console.log(dataKinerja.data);
