@@ -18,7 +18,7 @@ function App() {
         <Route path="pegawai/tambah" element={<TambahPegawai />} />
         <Route path="pegawai/jenjang/tambah/:nip" element={<TambahJenjangKarir />} />
         <Route path="golongan" element={<Golongan />} />
-        <Route path="*" element={<h1>404: Not Found</h1>} />
+        <Route path="*" element={<h1 className='justify-content-center items-center'>404: Not Found</h1>} />
       </Routes>
     </Router>
   );
