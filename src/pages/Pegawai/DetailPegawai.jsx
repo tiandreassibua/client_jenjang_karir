@@ -42,9 +42,9 @@ const DetailPegawai = () => {
         <div className="container py-3">
             <header>
                 <div className="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
-                    <a href="index.php" className="d-flex align-items-center text-dark text-decoration-none">
+                    <Link to={'/'} className="d-flex align-items-center text-dark text-decoration-none">
                         <span className="fs-4 fw-bold"><i className="fa fa-newspaper"></i> JENJANG KARIR</span>
-                    </a>
+                    </Link>
 
                     <nav className="d-inline-flex mt-2 mt-md-0 ms-md-auto">
                         <Link to={'/pegawai'} className="btn btn-secondary mb-3" title="Kembali">

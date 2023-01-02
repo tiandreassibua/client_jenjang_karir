@@ -13,7 +13,7 @@ const Pegawai = () => {
         <div className="container py-3">
             <header>
                 <div className="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
-                    <Link to={'/pegawai'} className="d-flex align-items-center text-dark text-decoration-none">
+                    <Link to={'/'} className="d-flex align-items-center text-dark text-decoration-none">
                         <span className="fs-4 fw-bold"><i className="fa fa-newspaper"></i> JENJANG KARIR</span>
                     </Link>
 
