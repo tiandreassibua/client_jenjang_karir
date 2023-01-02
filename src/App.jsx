@@ -28,12 +28,12 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/pegawai" element={<Pegawai />} />
-        <Route path="/pegawai/detail/:nip" element={<DetailPegawai />} />
-        <Route path="/pegawai/tambah" element={<TambahPegawai />} />
-        <Route path="/pegawai/jenjang/tambah/:nip" element={<TambahJenjangKarir />} />
-        <Route path="/formik" element={<Formik />} />
-        <Route path="/golongan" element={<Golongan />} />
+        <Route path="pegawai" element={<Pegawai />} />
+        <Route path="pegawai/detail/:nip" element={<DetailPegawai />} />
+        <Route path="pegawai/tambah" element={<TambahPegawai />} />
+        <Route path="pegawai/jenjang/tambah/:nip" element={<TambahJenjangKarir />} />
+        <Route path="formik" element={<Formik />} />
+        <Route path="golongan" element={<Golongan />} />
       </Routes>
     </Router>
   );
